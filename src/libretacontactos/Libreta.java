@@ -70,7 +70,8 @@ public class Libreta {
     }
     
     /**
-     *
+     * 
+     * 
      */
     public void eliminar(){
         boolean notFound = true;
