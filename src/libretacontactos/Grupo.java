@@ -8,8 +8,8 @@ package libretacontactos;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Jota
+ * This class can order the groups of diary.
+ * @author aabalalonso
  */
 public class Grupo {
     private String nombre;

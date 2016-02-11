@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package libretacontactos;
 import javax.swing.JOptionPane;
 /**
- *
- * @author Jota
+ * el destino de esta clase añade contactos , lista , crea grupos , agrega grupos y elimina contactos.
+ * @author aabalalonso
  */
 public class Libreta {
     //private String nombre;
@@ -15,13 +11,17 @@ public class Libreta {
     private final Contacto[] contactos=new Contacto[10];
     private final Grupo[] grupos = new Grupo[10];
     
+    /**
+     *
+     */
     public Libreta(){
-        /*for(int i=0;i<contactos.length;i++){
-            contactos[i]=new Contacto();
-            contactos[i].setNombre("");
-        }*/
+       
     }
     
+    /**
+     * debes meter por pantalla el contacto
+     * @param contacto
+     */
     public void engadir(Contacto contacto){
         boolean libretaLlena=true;
         for(int i=0;i<contactos.length;i++){
@@ -37,6 +37,9 @@ public class Libreta {
         }
     }
     
+    /**
+     * sirve para añadir un objeto contacto al array contactos 
+     */
     public void engadir(){
         boolean libretaLlena=true;
         for(int i=0;i<contactos.length;i++){
@@ -53,6 +56,9 @@ public class Libreta {
         }
     }
     
+    /**
+     *
+     */
     public void listar(){
         String cadena="";
         for(Contacto elemento:contactos){
@@ -63,7 +69,10 @@ public class Libreta {
         JOptionPane.showMessageDialog(null,cadena);
     }
     
-    public void borrar(){
+    /**
+     *
+     */
+    public void eliminar(){
         boolean notFound = true;
         int id = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el id del contacto que desea borrar:"));
         for(int i=0;i<contactos.length;i++){
@@ -80,6 +89,9 @@ public class Libreta {
         }
     }
     
+    /**
+     *
+     */
     public void crearGrupo(){
         boolean grupoLleno = true;
         String nombre = JOptionPane.showInputDialog("Introduce el nombre del grupo");
@@ -96,6 +108,9 @@ public class Libreta {
         }
     }
     
+    /**
+     *
+     */
     public void agregarAGrupo(){
         boolean contactoEncontrado = false ,grupoEncontrado = false;
         int indiceContactos = 0, indiceGrupos=0;

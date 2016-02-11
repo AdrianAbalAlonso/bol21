@@ -6,8 +6,8 @@
 package libretacontactos;
 
 /**
- *
- * @author Jota
+ * 
+ * @author aabalalonso
  */
 public class Contacto {
     public static int ncontactos=1;
